@@ -65,8 +65,9 @@ qplot(interval, avg_steps, data = interval, geom = "line", col = I("navyblue"),
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
+Find 5 minute interval with the most steps
+
 ```r
-#find interval with maximum steps
 interval[which.max(interval$avg_steps),]
 ```
 
@@ -74,6 +75,7 @@ interval[which.max(interval$avg_steps),]
 ##     interval avg_steps
 ## 104      835  206.1698
 ```
+The 835 interval has the highest number of steps.
 
 Imputing missing values
 
@@ -113,7 +115,7 @@ qplot(steps_per_day_imputed$steps, geom = "histogram",
               I(.5))
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
 ```r
 #mean and median steps per day with imputed values
@@ -155,4 +157,4 @@ ggplot(interval_weekday, aes(interval, avg_steps, color = factor(week))) +
         theme(legend.position = "none")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
