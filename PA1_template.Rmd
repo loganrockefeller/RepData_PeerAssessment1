@@ -47,10 +47,13 @@ interval <- data.frame(group_by(activity, interval) %>%
 qplot(interval, avg_steps, data = interval, geom = "line", col = I("navyblue"),
       main = "Average number of steps by time of day",
       xlab = "5 minute interval", ylab = "Average steps")
+```
 
-#find interval with maximum steps
+Find 5 minute interval with the most steps
+```{r}
 interval[which.max(interval$avg_steps),]
 ```
+The 835 interval has the highest number of steps.
 
 Imputing missing values
 ```{r}
